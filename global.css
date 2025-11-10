@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f6f7fb;
+    color: #252525;
+  }
+  
+  .disclaimer {
+    background: #ffe080;
+    color: #704c00;
+    padding: 8px 15px;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px #dec17d40;
+    font-style: italic;
+  }
+  
+  nav {
+    background: #283b6b;
+    padding: 12px;
+    text-align: center;
+    box-shadow: 0 4px 30px #00000010;
+  }
+  
+  nav a {
+    color: #e2eefa;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    padding: 2px 0;
+    transition: border-bottom 0.2s;
+  }
+  
+  nav a.active, nav a:hover {
+    border-bottom: 2px solid #ffe080;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 32px auto 0 auto;
+    padding: 16px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px #283b6b10;
+  }
+  
+  h1 {
+    color: #283b6b;
+    font-size: 2.1rem;
+    margin-top: 0;
+  }
+  
+  section {
+    margin-bottom: 32px;
+  }
+  
+  .skill-list, .project-list, .education-list, .contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skill-list li,
+  .project-list li,
+  .education-list li,
+  .contact-list li {
+    background: #e2eefa;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px #283b6b08;
+  }
+  
+  .resume-link {
+    display: block;
+    margin-top: 12px;
+    color: #2a6496;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    main { padding: 7vw 4vw; }
+    nav { padding: 8px 4vw; }
+  }
