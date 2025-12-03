@@ -1,0 +1,156 @@
+/* NIGHT SKY BACKGROUND */
+body {
+    margin: 0;
+    background: radial-gradient(circle at center, #1a0033, #000015 70%);
+    overflow-x: hidden;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white; /* Universal text color */
+  }
+  
+  /* STAR FIELD BASE */
+  .stars, .stars::after, .stars2, .stars2::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    pointer-events: none; /* Prevent blocking clicks */
+    z-index: -1;
+  }
+  
+  /* SMALL STARS */
+  .stars {
+    width: 1px;
+    height: 1px;
+    box-shadow:
+      500px 100px #ffffff,
+      200px 300px #ff9cff,
+      800px 900px #9cd3ff,
+      1200px 400px #ffd7ff,
+      300px 700px #b3e6ff,
+      1000px 1200px #ffffff,
+      1500px 200px #ffe3ff;
+    animation: fly 200s linear infinite;
+  }
+  
+  .stars::after {
+    width: 1px;
+    height: 1px;
+    box-shadow: inherit;
+    transform: translateY(2000px);
+  }
+  
+  /* LARGE STARS */
+  .stars2 {
+    width: 2px;
+    height: 2px;
+    box-shadow:
+      600px 200px #ffcbff,
+      300px 800px #c8e6ff,
+      900px 600px #ffffff,
+      1400px 1000px #ffd3ff,
+      500px 1300px #e6f3ff;
+    animation: fly 350s linear infinite;
+  }
+  
+  .stars2::after {
+    width: 2px;
+    height: 2px;
+    box-shadow: inherit;
+    transform: translateY(2000px);
+  }
+  
+  /* FLOAT MOTION */
+  @keyframes fly {
+    from { transform: translateY(0); }
+    to { transform: translateY(-2000px); }
+  }
+  
+  /* GLASS CONTENT BOX */
+  main {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 35px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  
+  /* HEADERS */
+  h1, h2, h3 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  
+  /* LISTS */
+  ul {
+    color: white;
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  /* NAVIGATION BAR */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  nav a {
+    color: #ffdfff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.2s ease;
+  }
+  
+  nav a:hover {
+    color: #ffffff;
+  }
+  
+  /* ACTIVE PAGE */
+  nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 3px;
+  }
+  
+  /* LINKS INSIDE CONTENT */
+  a {
+    color: #b5e3ff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #ffffff;
+  }
+  
+  /* BUTTONS / RESUME LINK */
+  .resume-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    backdrop-filter: blur(6px);
+    transition: 0.2s ease;
+  }
+  
+  .resume-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
