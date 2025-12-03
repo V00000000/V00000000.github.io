@@ -6,10 +6,10 @@ body {
     min-height: 100vh;
     font-family: Arial, sans-serif;
     color: white; /* Universal text color */
-  }
-  
-  /* ===================== STAR FIELD ===================== */
-  .stars, .stars::after, .stars2, .stars2::after {
+}
+
+/* ===================== STAR FIELD ===================== */
+.stars, .stars::after, .stars2, .stars2::after {
     content: "";
     position: fixed;
     top: 0;
@@ -17,58 +17,58 @@ body {
     background: transparent;
     pointer-events: none; /* prevent blocking clicks */
     z-index: -1;
-  }
-  
-  /* Small stars */
-  .stars {
+}
+
+/* Small stars */
+.stars {
     width: 1px;
     height: 1px;
     box-shadow:
-      500px 100px #ffffff,
-      200px 300px #ff9cff,
-      800px 900px #9cd3ff,
-      1200px 400px #ffd7ff,
-      300px 700px #b3e6ff,
-      1000px 1200px #ffffff,
-      1500px 200px #ffe3ff;
+        500px 100px #ffffff,
+        200px 300px #ff9cff,
+        800px 900px #9cd3ff,
+        1200px 400px #ffd7ff,
+        300px 700px #b3e6ff,
+        1000px 1200px #ffffff,
+        1500px 200px #ffe3ff;
     animation: fly 200s linear infinite;
-  }
-  
-  .stars::after {
+}
+
+.stars::after {
     width: 1px;
     height: 1px;
     box-shadow: inherit;
     transform: translateY(2000px);
-  }
-  
-  /* Large stars */
-  .stars2 {
+}
+
+/* Large stars */
+.stars2 {
     width: 2px;
     height: 2px;
     box-shadow:
-      600px 200px #ffcbff,
-      300px 800px #c8e6ff,
-      900px 600px #ffffff,
-      1400px 1000px #ffd3ff,
-      500px 1300px #e6f3ff;
+        600px 200px #ffcbff,
+        300px 800px #c8e6ff,
+        900px 600px #ffffff,
+        1400px 1000px #ffd3ff,
+        500px 1300px #e6f3ff;
     animation: fly 350s linear infinite;
-  }
-  
-  .stars2::after {
+}
+
+.stars2::after {
     width: 2px;
     height: 2px;
     box-shadow: inherit;
     transform: translateY(2000px);
-  }
-  
-  /* Star floating motion */
-  @keyframes fly {
+}
+
+/* Star floating motion */
+@keyframes fly {
     from { transform: translateY(0); }
     to { transform: translateY(-2000px); }
-  }
-  
-  /* ===================== GLASS CONTENT BOX ===================== */
-  .content-box {
+}
+
+/* ===================== GLASS CONTENT BOX ===================== */
+.content-box {
     max-width: 900px;
     margin: 80px auto;
     padding: 35px;
@@ -80,29 +80,29 @@ body {
     position: relative;
     z-index: 3;
     color: white;
-  }
-  
-  /* ===================== HEADERS ===================== */
-  h1, h2, h3 {
+}
+
+/* ===================== HEADERS ===================== */
+h1, h2, h3 {
     color: #ffffff;
     text-align: center;
     margin-bottom: 25px;
-  }
-  
-  /* ===================== LISTS ===================== */
-  ul {
+}
+
+/* ===================== LISTS ===================== */
+ul {
     color: white;
     list-style: none;
     padding-left: 0;
-  }
-  
-  ul li {
+}
+
+ul li {
     margin-bottom: 10px;
     font-size: 18px;
-  }
-  
-  /* ===================== NAVIGATION BAR ===================== */
-  nav {
+}
+
+/* ===================== NAVIGATION BAR ===================== */
+nav {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -112,38 +112,38 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
     z-index: 3;
-  }
-  
-  nav a {
+}
+
+nav a {
     color: #ffdfff;
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
     transition: 0.2s ease;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     color: #ffffff;
-  }
-  
-  nav a.active {
+}
+
+nav a.active {
     color: #ffffff;
     border-bottom: 2px solid #ffffff;
     padding-bottom: 3px;
-  }
-  
-  /* ===================== LINKS ===================== */
-  a {
+}
+
+/* ===================== LINKS ===================== */
+a {
     color: #b5e3ff;
     text-decoration: none;
-  }
-  
-  a:hover {
+}
+
+a:hover {
     color: #ffffff;
-  }
-  
-  /* ===================== RESUME BUTTON ===================== */
-  .resume-link {
+}
+
+/* ===================== RESUME BUTTON ===================== */
+.resume-link {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 20px;
@@ -154,9 +154,15 @@ body {
     font-weight: bold;
     backdrop-filter: blur(6px);
     transition: 0.2s ease;
-  }
-  
-  .resume-link:hover {
+}
+
+.resume-link:hover {
     background: rgba(255, 255, 255, 0.25);
-  }
-  
+}
+
+/* ===================== BOOTSTRAP COMPATIBILITY ===================== */
+/* Ensure content-box margins work with Bootstrap container */
+.container, .row, .col {
+    z-index: 3; /* Keep above stars */
+    position: relative;
+}
