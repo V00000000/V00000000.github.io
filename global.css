@@ -1,4 +1,4 @@
-/* NIGHT SKY BACKGROUND */
+/* ===================== NIGHT SKY BACKGROUND ===================== */
 body {
     margin: 0;
     background: radial-gradient(circle at center, #1a0033, #000015 70%);
@@ -8,18 +8,18 @@ body {
     color: white; /* Universal text color */
   }
   
-  /* STAR FIELD BASE */
+  /* ===================== STAR FIELD ===================== */
   .stars, .stars::after, .stars2, .stars2::after {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     background: transparent;
-    pointer-events: none; /* Prevent blocking clicks */
+    pointer-events: none; /* prevent blocking clicks */
     z-index: -1;
   }
   
-  /* SMALL STARS */
+  /* Small stars */
   .stars {
     width: 1px;
     height: 1px;
@@ -41,7 +41,7 @@ body {
     transform: translateY(2000px);
   }
   
-  /* LARGE STARS */
+  /* Large stars */
   .stars2 {
     width: 2px;
     height: 2px;
@@ -61,31 +61,35 @@ body {
     transform: translateY(2000px);
   }
   
-  /* FLOAT MOTION */
+  /* Star floating motion */
   @keyframes fly {
     from { transform: translateY(0); }
     to { transform: translateY(-2000px); }
   }
   
-  /* GLASS CONTENT BOX */
-  main {
+  /* ===================== GLASS CONTENT BOX ===================== */
+  .content-box {
     max-width: 900px;
     margin: 80px auto;
     padding: 35px;
-    background: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.55); /* semi-transparent black */
+    backdrop-filter: blur(12px);      /* frosted glass effect */
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 3;
+    color: white;
   }
   
-  /* HEADERS */
+  /* ===================== HEADERS ===================== */
   h1, h2, h3 {
     color: #ffffff;
     text-align: center;
     margin-bottom: 25px;
   }
   
-  /* LISTS */
+  /* ===================== LISTS ===================== */
   ul {
     color: white;
     list-style: none;
@@ -97,7 +101,7 @@ body {
     font-size: 18px;
   }
   
-  /* NAVIGATION BAR */
+  /* ===================== NAVIGATION BAR ===================== */
   nav {
     display: flex;
     justify-content: center;
@@ -106,6 +110,8 @@ body {
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 3;
   }
   
   nav a {
@@ -120,14 +126,13 @@ body {
     color: #ffffff;
   }
   
-  /* ACTIVE PAGE */
   nav a.active {
     color: #ffffff;
     border-bottom: 2px solid #ffffff;
     padding-bottom: 3px;
   }
   
-  /* LINKS INSIDE CONTENT */
+  /* ===================== LINKS ===================== */
   a {
     color: #b5e3ff;
     text-decoration: none;
@@ -137,7 +142,7 @@ body {
     color: #ffffff;
   }
   
-  /* BUTTONS / RESUME LINK */
+  /* ===================== RESUME BUTTON ===================== */
   .resume-link {
     display: inline-block;
     margin-top: 15px;
@@ -154,3 +159,4 @@ body {
   .resume-link:hover {
     background: rgba(255, 255, 255, 0.25);
   }
+  
